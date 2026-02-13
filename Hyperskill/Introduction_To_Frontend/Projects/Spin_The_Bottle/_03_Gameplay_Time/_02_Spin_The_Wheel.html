@@ -1,0 +1,44 @@
+<!--Description
+Alright, it's time to ramp things up a notch! Remember that list of players you've been working with? Well, it's time to give them a spin.
+Literally. In this exciting stage, you'll be adding a new feature to your project - the ability to choose a random player from your list.
+
+Here's how it's going to work:
+
+We're going to need a few things:
+1. Button Press: When the "Spin" button is clicked, we want our program to leap into action. It's showtime!
+2. Status Update: As soon as that button is clicked, we want our status text to change. It should now read "Spinning...". This will give our users the thrill of anticipation, as they wait to see who the lucky player will be.
+3. The Wait: But we don't want to reveal our chosen player too quickly. Oh no, we're going to make them wait for it. For two whole seconds, in fact.
+4. The Reveal: And finally, after those suspense-filled two seconds have passed, the status text should change once again. This time, it should show the name of the chosen player.
+
+So, are you ready to take on the challenge? This stage will test your knowledge of JavaScript.
+
+Objectives
+In this stage, you should have:
+    • Upon clicking the spin button, the status text should change to "Spinning...".
+    • Choose a random player from the list of players.
+    • After a 2-second delay, the status text should update to show the selected player. -->
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+<h1>Spin The Bottle</h1>
+<p id="players-text">Players</p>
+<ul id="players">
+    <li>Player 1</li>
+    <li>Player 2</li>
+    <li>Player 3</li>
+    <li>Player 4</li>
+    <li>Player 5</li>
+    <li>Player 6</li>
+</ul>
+<p id="status">Spin the bottle!</p>
+<button id="spin">Spin</button>
+<script src="script.js"></script>
+</body>
+</html>

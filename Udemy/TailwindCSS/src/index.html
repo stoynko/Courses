@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/dist/output.css" rel="stylesheet">
+  <script defer src="assets/fontawesome/js/fontawesome.min.js"></script>
+  <script defer src="assets/fontawesome/js/solid.min.js"></script>
+  <script>
+    window.onload = () => {
+        const burgerButton = document.getElementById("mobile-menu-burger-button");
+        burgerButton.addEventListener("click", () => {
+            if (burgerButton.classList.contains("open")) {
+                burgerButton.classList.remove("open");
+            } else {
+                burgerButton.classList.add("open");
+            }
+        });
+
+        const ticketsButton = document.getElementById("tickets-menu-item");
+        ticketsButton.addEventListener("click", () => {
+            if (ticketsButton.classList.contains("open")) {
+                ticketsButton.classList.remove("open");
+            } else {
+                ticketsButton.classList.add("open");
+            }
+        });
+    }
+  </script>
+</head>
+<body>
+    <main>
+    <header class="text-zinc-200">
+
+        <nav class="sticky flex top-0 bg-linear-to-r from-rose-500 to-pink-500">
+
+            <!-- HEADER LOGO -->
+            <div class="flex items-center p-2 gap-2">
+                <img src="assets/images/logo-inverted.png" width="50">
+                <div class="font-bold text-2xl">
+                    Tailwind: <span class="text-sky-800">Music Festival</span>
+                </div>
+            </div>
+
+            <!-- HEADER BUTTONS -->
+            <div class="md:flex hidden flex-1 items-center justify-end">
+                <div class="nav-menu-item"><span>Home</span></div> 
+                <div class="nav-menu-item"><span>Lineup</span></div> 
+
+                <!-- TICKETS SUBMENU-->
+                <div class="nav-menu-item group">
+                    <span>Tickets</span>
+                    <div class="absolute top-full hidden group-hover:block bg-pink-500 right-0 whitespace-nowrap rounded-b-md text-right">
+                        <div class="p-4 font-bold hover:bg-white/5 hover:text-zinc-200 transition-colors 
+                        ease-in-out cursor-pointer text-pink-200"><span>Single Day Ticket</span></div>
+
+                        <div class="p-4 font-bold hover:bg-white/5 hover:text-zinc-200 transition-colors 
+                        ease-in-out cursor-pointer text-pink-200"><span>7 Days Ticket</span></div>
+                    </div>  
+                </div> 
+                <div class="nav-menu-item"><span>Info</span></div> 
+            </div>
+
+            <!-- BURGER BUTTON FOR MOBILE -->
+            <div class="md:hidden my-auto ml-auto block cursor-pointer pr-4">
+                <button id="mobile-menu-burger-button" class="group peer">
+                    <div class="top-0 group-open:rotate-45 group-open:top-2 relative transition-all bg-zinc-200 rounded-full w-8 h-1 "></div>
+                    <div class="opacity-100 group-open:opacity-0 transition-all bg-zinc-200 rounded-full w-8 h-1 mt-1 "></div>
+                    <div class="top- 0 group-open:-rotate-45 group-open:bottom-2 relative transition-all group-open:rotate- bg-zinc-200 rounded-full w-8 h-1 mt-1"></div>
+                </button>
+
+                <!-- NAVIGATION FOR MOBILE -->
+                <div class="absolute hidden peer-open:block w-full left-0 top-[62px] bg-gradient-to-r from-rose-500 to-pink-500">
+                    
+                    <div class="relative flex items-center h-full cursor-pointer justify-center p-4 font-semibold 
+                    text-pink-200 hover:text-zinc-200 hover:bg-white/10 transition-colors ">
+                        <span>Home</span>
+                    </div>
+
+                    <div class="relative flex items-center h-full cursor-pointer justify-center p-4 font-semibold 
+                    text-pink-200 hover:text-zinc-200 hover:bg-white/10 transition-colors ">
+                        <span>Lineup</span>
+                    </div>
+
+                    <!-- TICKETS SUBNAVIGATION FOR MOBILE -->
+                    <div id="tickets-menu-item" class="group relative h-full cursor-pointer text-pink-200 hover:text-zinc-200 hover:bg-white/10 transition-colors ">
+                        <div class="p-4 text-center font-semibold">
+                            <span>Tickets</span>
+                        </div>
+                        <div class="hidden group-open:block">
+                            <div class="relative text-center p-4 text-pink-200 hover:text-zinc-200 hover:bg-white/5 transition-colors ease-in-out">
+                                <span>Single Day Ticket</span>
+                            </div>
+                            <div class="relative text-center p-4 text-pink-200 hover:text-zinc-200 hover:bg-white/5 transition-colors ease-in-out">
+                                <span>7 Day Ticket</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative flex items-center h-full cursor-pointer justify-center p-4 font-semibold 
+                    text-pink-200 hover:text-zinc-200 hover:bg-white/10 transition-colors ">
+                        <span>Support</span>
+                    </div>
+                </div>
+            
+                </div>
+            </div>
+        </nav>
+
+        <!-- HERO IMAGE & CONTAINER-->
+        <div class="bg-cover bg-center bg-fixed flex flex-col items-center justify-center h-[calc(100vh-200px)] min-h[400px]"
+        style="background-image: url(assets/images/hero.jpg);">
+
+            <!-- HERO ICON CONTAINER -->
+            <div class="bg-white/30 py-2 px-4 rounded-xl text-center backdrop-blur-sm">
+
+                <!-- HERO ICON-->
+                <div class="relative ">
+                    <img src="assets/images/logo.png" width="175px"/>
+
+                    <!-- WAVEFORM BARS CONTAINER-->
+                    <div class="flex items-center justify-center mt-[-70px] mb-5">
+
+                        <!-- WAVEFORM BARS CIRCLE SHAPE-->
+                        <div class="flex justify-center items-center h-14 w-14 bg-pink-500 rounded-full gap-1">
+                            <div class="h-2 w-0.5 rounded-full bg-pink-300 animate-wave "></div>
+                            <div class="h-3 w-0.5 rounded-full bg-pink-200 animate-wave animation-delay-200"></div>
+                            <div class="h-4 w-0.5 rounded-full bg-pink-100 animate-wave animation-delay-[200ms]"></div>
+                            <div class="h-3 w-0.5 rounded-full bg-pink-200 animate-wave animation-delay-[350ms]"></div>
+                            <div class="h-2 w-0.5 rounded-full bg-pink-300 animate-wave animation-delay-[75ms]"></div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="text-5xl font-bold ">TW:
+                    <span class="text-sky-900"> MF</span>
+            </div>
+            
+        </div>
+
+        <!-- SUBSCRIBE FORM -->
+        <div class="text-sm font-bold mt-3">Keep me updated with news and promotions</div>
+
+        <form class="flex mt-3 gap-2">
+            <input type="email" placeholder="email@email.com" class="rounded-md border-white/40 bg-white/30 backdrop-blur-md p-2 
+            font-bold text-pink-400 placeholder-zinc-300 caret-pink-500 outline-pink-500 focus:outline">
+            <button type="submit" class="cursor-pointer bg-pink-500 py-2 px-4 font-bold transition-colors hover:bg-sky-500 
+            hover:shadow-lg hover:shadow-black/20"> Subscribe</div>
+        </form>
+    </header>
+
+    <div class="max-w-screen-lg mt-20 mx-auto">
+            <h2>Headliners</h2>
+            <p>Experience the sonic delight from these made-up artists across 7 days, that music fans are calling "one of the many gigs that will happen this year".</p>
+    
+            <!-- CAROUSEL -->
+            <div class="flex mt-4 pb-5 w-full gap-4 snap-x overflow-x-auto">
+
+            </div>
+        </div>
+    
+        
+    </main>
+</body>
+</html>

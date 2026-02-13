@@ -1,0 +1,84 @@
+<!--Description:
+In this step, you'll be adding the main content to your blog. Start by using a <main> tag to enclose all the content.
+Within this <main> tag, create a <section> tag that will hold two articles, each wrapped in an <article> tag.
+
+For the first article, include a title with an <h3> heading, followed by the publication date in an <i> tag.
+Write a brief paragraph within a <p> tag to give a preview of the article's content. If the article is about programming,
+you might want to include a code snippet using a <code> tag inside a <p> tag, displaying something like console.log("Hello, World!").
+Additionally, embed a video using the <video> tag with the controls attribute and a src attribute that points to the video file.
+
+In the second article, repeat the process with a different title and publication date.
+Write a brief introduction in a <p> tag and include a quote in a <blockquote> tag, using the <q> tag for the quote itself.
+Add an audio file using the <audio> tag, including the controls attribute and a src attribute for the audio file.
+
+Always remember to close all the tags correctly and make sure your HTML code is well-structured.
+
+Objectives:
+    In this stage, you are required to:
+        • Insert the <main> tag within the body of the blog template.
+        • In the <main> tag, create a <section> tag to group two articles.
+        • Create 2 articles, each enclosed within an <article> tag.
+        • For each article, include an <h3> tag and a unique title.
+        • Beneath each heading, show the publication date using the <i> tag.
+        • Write a brief paragraph using the <p> tag to introduce the content of each article.
+        • For the first article, present a code snippet using the <code> tag within a <p> tag.
+        • Embed a video in the first article using the <video> tag with the controls attribute and a src attribute directing to the video file.
+        • For the second article, use the <blockquote> tag to present a quote from an interview.
+        • Within the <blockquote> tag, use the <q> tag to show the quote.
+        • Embed an audio file in the second article using the <audio> tag with the controls attribute and a src attribute pointing to the audio file. -->
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Hyperblog</title>
+</head>
+<header>
+    <h1>Hyperblog</h1>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#politics">Politics</a></li>
+            <li><a href="#sports">Sports</a></li>
+            <li><a href="#entertainment">Entertainment</a></li>
+            <li><a href="#technology">Technology</a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+<aside>
+    <h2>Popular Articles</h2>
+    <ol type="I">
+        <li>
+            <a href="">10 Mistakes You’re Still Making in Java (and How to Fix Them)</a>
+        </li>
+        <li>
+            <a href="">Mastering JavaScript in 2025: The Ultimate Guide</a>
+        </li>
+        <li>
+            <a href="">This One Workflow Boosted My Output by 300%</a>
+        </li>
+    </ol>
+</aside>
+<main>
+    <section>
+        <article>
+            <h3>Unique Article Title #1</h3>
+            <i>Published on 25.06.2025</i>
+            <p>The story of our first program:<br>
+                <code>console.log("Hello, world!");</code>
+            </p>
+            <video src="" controls></video>
+        </article>
+        <article>
+            <h3>Unique Article Title #2</h3>
+            <i>Published on 26.06.2025</i>
+            <p>Here is an example quote:</p>
+            <blockquote><q>"It's a quote!</q></blockquote>
+            <audio src="" controls></audio>
+        </article>
+    </section>
+</main>
+</body>
+</html>

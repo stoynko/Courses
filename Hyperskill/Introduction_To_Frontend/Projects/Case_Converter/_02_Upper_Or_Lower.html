@@ -1,0 +1,77 @@
+<!--Let's work with the text in the textarea element by adding button handlers. Your application should convert text to uppercase,
+lowercase, proper case, and sentence case.Your application should be able to convert a text into the upper case,
+lower case, proper case, and sentence case.
+
+    • Upper case: All letters are uppercase (e.g., THIS IS UPPERCASE TEXT).
+    • Lower case: All letters are lowercase (e.g., this is lowercase text).
+    • Proper case: Each word starts with an uppercase letter, and the rest are lowercase (e.g., This Is Proper Case Text).
+    • Sentence case: Each sentence starts with an uppercase letter, and the rest are lowercase (e.g., This is sentence case.
+      Only the first word of each sentence is capitalized).
+
+Tip: This stage requires knowledge of various string methods. You can take a look at the string methods like join(), charAt(),
+split(), slice(). If you're using the split() method, double-check your separator for different cases.
+Also, for the sentence case notice that there is an empty character after the dot.
+
+Objectives:
+
+Your web page should contain all elements from the previous stage.
+
+    Add the following event handlers to the buttons::
+        • When the upper-case button is pressed, convert the textarea text to uppercase.
+        • When the lower-case button is pressed, convert the textarea text to lowercase.
+        • When the proper-case button is pressed, convert the textarea text to proper case.
+        • When the sentence-case button is pressed, convert the textarea text to sentence case.
+
+We will implement the functionality behind the buttons in the next stages.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Case Converter</title>
+</head>
+<body>
+<div class="title">Case Converter</div>
+<textarea id="text-area" rows="15" cols="60"></textarea> <br>
+<button id="upper-case">Upper Case</button>
+<button id="lower-case">Lower Case</button>
+<button id="proper-case">Proper Case</button>
+<button id="sentence-case">Sentence Case</button>
+
+<script>
+    const textArea = document.getElementById('text-area');
+
+    document.getElementById('upper-case').addEventListener('click', () => {
+        textArea.value = textArea.value.toUpperCase();
+    });
+
+    document.getElementById('lower-case').addEventListener('click', () => {
+        textArea.value = textArea.value.toLowerCase();
+    });
+
+    document.getElementById('proper-case').addEventListener('click', () => {
+        let text = textArea.value.toLowerCase();
+        let words = text.split(/\s+/);
+
+        let output = words.map(word => {
+            if (word.length === 0) return '';
+            return word.charAt(0).toUpperCase() + word.slice(1);
+        }).join(' ');
+
+        textArea.value = output;
+    });
+
+    document.getElementById('sentence-case').addEventListener('click', () => {
+        let sentences = textArea.value.toLowerCase().split('. ');
+        let modifiedSentences = [];
+        for (let sentence of sentences) {
+            let modifiedSentence = sentence.charAt(0).toUpperCase().concat(sentence.slice(1));
+            modifiedSentences.push(modifiedSentence);
+        }
+        textArea.value = modifiedSentences.join('. ');
+    });
+
+</script>
+</body>
+</html>

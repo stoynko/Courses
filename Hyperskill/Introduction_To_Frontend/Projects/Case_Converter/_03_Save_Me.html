@@ -1,0 +1,70 @@
+<!--Description
+You can convert the text into different cases, excellent! Now let's add the ability to save the changed text as a .txt file!.
+
+Objectives:
+Add one more button to the page. Assign the save-text-file id to it. Add another event handler for the button.
+When the button is clicked, you should get the text in the textarea element and generate the text.txt file.
+The resulting file should contain the text from the textarea element.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Case Converter</title>
+</head>
+<body>
+<div class="title">Case Converter</div>
+<textarea id="text-area" rows="15" cols="60"></textarea> <br>
+<button id="upper-case">Upper Case</button>
+<button id="lower-case">Lower Case</button>
+<button id="proper-case">Proper Case</button>
+<button id="sentence-case">Sentence Case</button>
+<button id="save-text-file">Save Text File</button>
+
+<script>
+    const textArea = document.getElementById('text-area');
+
+    document.getElementById('upper-case').addEventListener('click', () => {
+        textArea.value = textArea.value.toUpperCase();
+    });
+
+    document.getElementById('lower-case').addEventListener('click', () => {
+        textArea.value = textArea.value.toLowerCase();
+    });
+
+    document.getElementById('proper-case').addEventListener('click', () => {
+        let text = textArea.value.toLowerCase();
+        let words = text.split(/\s+/);
+
+        let output = words.map(word => {
+            if (word.length === 0) return '';
+            return word.charAt(0).toUpperCase() + word.slice(1);
+        }).join(' ');
+
+        textArea.value = output;
+    });
+
+    document.getElementById('sentence-case').addEventListener('click', () => {
+        let sentences = textArea.value.toLowerCase().split('. ');
+        let modifiedSentences = [];
+        for (let sentence of sentences) {
+            let modifiedSentence = sentence.charAt(0).toUpperCase().concat(sentence.slice(1));
+            modifiedSentences.push(modifiedSentence);
+        }
+        textArea.value = modifiedSentences.join('. ');
+    });
+
+    document.getElementById('save-text-file').addEventListener('click', function(){
+        let text = textArea.value;
+        let element = document.createElement('a');
+        element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+        element.setAttribute('download', 'text.txt');
+        element.style.display = 'none';
+        document.body.appendChild(element);
+        element.click();
+        document.body.removeChild(element);
+    });
+</script>
+</body>
+</html>

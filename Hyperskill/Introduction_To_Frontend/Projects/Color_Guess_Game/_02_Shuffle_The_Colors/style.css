@@ -1,0 +1,7 @@
+.color-block {
+    display: inline-block;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 20px;
+}

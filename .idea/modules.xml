@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Courses.iml" filepath="$PROJECT_DIR$/Courses.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Hyperskill/Introduction_To_Java/Introduction_To_Java.iml" filepath="$PROJECT_DIR$/Hyperskill/Introduction_To_Java/Introduction_To_Java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Hyperskill/Java_Developer/Java_Developer.iml" filepath="$PROJECT_DIR$/Hyperskill/Java_Developer/Java_Developer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Hyperskill/Kotlin_Core/Kotlin_Core.iml" filepath="$PROJECT_DIR$/Hyperskill/Kotlin_Core/Kotlin_Core.iml" />
     </modules>
   </component>
 </project>

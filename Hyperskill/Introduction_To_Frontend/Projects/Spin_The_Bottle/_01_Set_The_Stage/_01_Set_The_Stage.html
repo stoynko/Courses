@@ -1,0 +1,49 @@
+<!--Description
+Welcome to the first stage of our exciting project - "Spin the Bottle"! This isn't your average party game.
+We're taking it up a notch and digitizing the fun. But before we can start spinning, we need to set the stage.
+
+This stage is all about creating the HTML structure of our web app. Picture this as the skeleton of our game.
+It's the basic structure around which everything else is built.
+
+We're going to need a few things:
+1. Title: Every great game needs a catchy title. Create a heading for our game that says "Spin The Bottle".
+2. List of Players: This is where the names of our brave participants will be displayed. Think of it as the game's roll call.
+3. Status Text: This is where we'll announce the chosen player each time the bottle spins. The tension! The suspense!
+4. Spin Button: The button that starts it all. The heart of our game. When this button is clicked, the bottle spins, and a random player is chosen.
+
+Remember, HTML is the backbone of any web page. It might not look like much on its own,
+but it's the foundation upon which we build everything else. So, let's get this right!
+
+Objectives
+In this stage, you should have:
+    • <h1> Tag: To create the heading "Spin The Bottle".
+    • <p> Tag with ID: To create a paragraph with the ID "players-text" to display "Players".
+    • <ul> Tag with ID: To create an unordered list with the ID "players".
+        <li> Tags: To create list items for each player. There should be 6 players.
+        he player names for this stage should be like the example. Name them "Player 1" to "Player 6".
+    • Another <p> Tag with ID: To create a paragraph with the ID "status" to display "Spin the bottle!".
+    • <button> Tag with ID: To create a button with the ID "spin" and the text "Spin".-->
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+<h1>Spin The Bottle</h1>
+<p id="players-text">Players</p>
+<ul id="players">
+    <li>Player 1</li>
+    <li>Player 2</li>
+    <li>Player 3</li>
+    <li>Player 4</li>
+    <li>Player 5</li>
+    <li>Player 6</li>
+</ul>
+<p id="status">Spin the bottle!</p>
+<button id="spin">Spin</button>
+</body>
+</html>

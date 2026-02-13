@@ -1,0 +1,19 @@
+main {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#video-frame {
+    width: 100%;
+    height: 80vh;
+}
+
+#weather-frame {
+    width: 100%;
+    height: 40vh;
+}

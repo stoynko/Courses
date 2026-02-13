@@ -1,0 +1,69 @@
+<!--Description
+Welcome, contestants, to the "Color Guess Game"!
+
+In this project, you'll be putting your RGB color knowledge to the test!
+Can you decipher the mysterious RGB code and select the correct color block?
+The stage is set with 6 vibrant color blocks waiting for your keen eye to pick out the right one.
+
+Let's set the scene for our first stage, shall we? You'll need the following HTML elements to kick off this colorful game:
+
+        •An eye-catching `<h1>` element to grab your attention and set the tone for the challenge ahead.
+        •A mesmerizing `<p>` tag displaying the RGB color value, teasing you with its cryptic code.
+        •6 dazzling `<div>` elements, each representing a different color block for you to choose from.
+        •And of course, a handy-dandy "Restart" button to reset the game and try your luck once more!
+        •Get ready to dive into the world of hues, shades, and RGB mysteries as you take your first steps into the
+         "Color Guess Game"! Are you up for the challenge? Let the games begin!
+
+To make the color-blocks similar to examples you can use this style for the color-block class:
+
+    .color-block {
+     display: inline-block;
+     margin: 10px;
+     border-radius: 5px;
+     cursor: pointer;
+     padding: 20px;
+    }
+
+Objectives
+In this stage, you should:
+
+        •Create an HTML document with the specified structure.
+        •Set up the title of the game as "Color Guess Game" using an h1 element.
+        •Display the RGB color to be guessed using a paragraph element with the id "rgb-color". The text should be "RGB(255, 0, 0)".
+        •Show the initial status message "Start Guessing!" using a paragraph element with the id "status".
+        •Include a button element with the id "restart" for restarting the game.
+        •Create six color blocks, each represented by a div element with the class "color-block".
+        •Set the background color of each color block using CSS with the specified RGB values.
+        •Following this order, colors are:
+            1. RGB(255, 0, 0)
+            2.RGB(255, 255, 0)
+            3.RGB(0, 255, 0)
+            4.RGB(0, 255, 255)
+            5.RGB(0, 0, 255)
+            6.RGB(255, 0, 255)
+-->
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+<h1> Color Guess Game</h1>
+<p id="rgb-color">RGB(255, 0, 0)</p>
+<p id="status">Start Guessing!</p>
+<button id="restart">Restart</button>
+<div class="color-block" style="background-color: rgb(255, 0, 0)"></div>
+<div class="color-block" style="background-color: rgb(255, 255, 0)"></div>
+<div class="color-block" style="background-color: rgb(0, 255, 0)"></div>
+<div class="color-block" style="background-color: rgb(0, 255, 255)"></div>
+<div class="color-block" style="background-color: rgb(0, 0, 255)"></div>
+<div class="color-block" style="background-color: rgb(255, 0, 255)"></div>
+
+
+</body>
+</html>

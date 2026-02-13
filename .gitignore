@@ -1,8 +1,8 @@
-### IntelliJ IDEA ###
+### IntelliJ IDEA ###\
+/.idea/
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
-.kotlin
 
 ### Eclipse ###
 .apt_generated
@@ -28,3 +28,14 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+### Project Specific ###
+/Udemy/TailwindCSS/dist/
+/Udemy/TailwindCSS/node_modules/
+/Hyperskill/Kotlin_Core/Kotlin_Core.iml
+/Hyperskill/Introduction_To_Javascript/node_modules/
+/Hyperskill/Introduction_To_Javascript/Introduction_To_JavaScript.iml
+/Hyperskill/SQL_For_Backend_Developers/SQL_For_Backend_Developers.iml
+/Hyperskill/Java_Developer/src/Projects/placeholder
+/Hyperskill/Java_Developer/Java_Developer.iml
+

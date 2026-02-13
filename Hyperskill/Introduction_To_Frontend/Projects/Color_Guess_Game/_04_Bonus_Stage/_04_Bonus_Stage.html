@@ -1,0 +1,52 @@
+<!--Description
+Are you ready, contestants? It's time for the third stage of our colorful challenge! 🎨💥
+
+In this stage, the excitement reaches its peak as the player, get to interact with the color-blocks like never before.
+Click on those vibrant hues and watch the magic unfold! If your choice is incorrect, fear not! The color-block will gracefully disappear,
+and our status text will say, "Try Again!"
+
+But wait, there's more! Make the right selection, and prepare to bask in the glory of correctness!
+s you choose the correct color-block, our status text will say, "Correct!"
+
+And for those moments when you need a fresh start, fear not! Simply hit that restart button,
+and watch as the game resets itself with a whole new set of colors, ready to challenge you once again!
+
+Objectives
+In this stage, you should:
+
+    • Handle the click event on a color block:
+       - If the clicked block's color matches the correct color, update the status message to "Correct!" and optionally,
+         set all color blocks to display the correct color.
+       - If the clicked block's color does not match the correct color, update the status message to "Try Again!" and hide the clicked block.
+         Use display: none to hide the block.
+    • Restart the game when clicked on the restart button:
+       - Reset the status message to "Start Guessing!".
+       - Show all color blocks.
+       - Start a new game. -->
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="game-container">
+    <h1> Color Guess Game</h1>
+    <p id="rgb-color">RGB(255, 0, 0)</p>
+    <p id="status">Start Guessing!</p>
+    <div class="blocks-container">
+        <div class="color-block"></div>
+        <div class="color-block"></div>
+        <div class="color-block"></div>
+        <div class="color-block"></div>
+        <div class="color-block"></div>
+        <div class="color-block"></div>
+    </div>
+    <button id="restart">Restart</button>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

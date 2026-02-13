@@ -1,0 +1,49 @@
+<!--Description
+Welcome to the final stage! This stage is all about making our Spin the Bottle game interactive and user-friendly.
+We're going to create a form to recruit our players and add them to the game.Here's how it's going to work:
+
+Here's the challenge:
+
+1. Form Creation: You'll need to add a form to your web page. This form will be used to gather the names of our eager participants who can't wait to play Spin the Bottle.
+2. Status Update: Before any player is added, our status should show a message that says: "Add players to spin the bottle." This is your chance to give your users some guidance and let them know what they need to do next.
+3. Form Submission: This is where things get tricky. When a user submits the form, we want to add the player's name to our list, but we don't want the page to reload. Your challenge is to prevent the default form submission behavior and add the player to our list without refreshing the page. Also, if the player name already exists in the list, you should not add it and instead update the status text with "Player already exists!".
+4. Keep the Game Going: Once you've added the new player to the list, clear the input and everything else should work just like before. The bottle should spin, a player should be chosen, and the status should be updated.
+
+Good luck, coders! May the best player win!
+
+Objectives
+In this stage, you should have:
+    • Delete the demo players (Player 1, Player 2, ...), that is, list items and add a form element to collect player names above the ul element.
+    • Change the text of the p tag having id="status" to "Add players to spin the bottle."
+    • Include a label with the text "Enter player name" for the input.
+    • Include input field to enter the player name with ID "player-name" and placeholder "Player name".
+    • Add a button with ID "add-player" and text "Add player" to submit and add the player.
+    • Update the player list dynamically when a new player is added.
+    • Set an initial status message to prompt the user to add players.
+    • Prevent the default form submission behavior when adding a player.
+    • Clear the input after form submission.
+    • Prevent adding the same player name to the list and warn the user by updating the status text to "Player already exists!". -->
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+<h1>Spin The Bottle</h1>
+
+<form>
+    <label for="player-name">Enter player name:</label>
+    <input type="text" id="player-name" placeholder="Player name">
+    <button id="add-player" type="button">Add player</button>
+</form>
+<p id="players-text">Players</p>
+<ul id="players"></ul>
+<p id="status">Add players to spin the bottle.</p>
+<button id="spin">Spin</button>
+<script src="script.js"></script>
+</body>
+</html>

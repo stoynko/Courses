@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import "../node_modules/tailwindcss/dist/lib.d.mts";
+
+@theme {
+  --font-quickstand: "Quicksand", sans-serif;
+
+  --animate-wave: wave 1000ms linear infinite; 
+
+  --animate-delay-100: 100ms;
+  --animate-delay-200: 200ms;
+  --animate-delay-300: 300ms;
+  --animate-delay-400: 400ms;
+  --animate-delay-500: 500ms;
+  --animate-delay-600: 600ms;
+  --animate-delay-700: 700ms;
+  --animate-delay-800: 800ms;
+  --animate-delay-900: 900ms;
+  --animate-delay-1000: 1000ms;
+}
+
+@keyframes wave {
+  0% , 100% {
+    transform: scaleY(0.5);
+  }
+  50% {
+    transform: scaleY(1.5);
+  }
+}
+
+@utility animation-delay-* {
+  animation-delay: value(--animate-delay-*);
+  animation-delay: --value([*])
+}
+
+@layer base {
+  body {
+    font-family: var(--font-quickstand);
+  }
+  h1 {
+    @apply text-6xl font-bold;
+  }
+  h2 {
+    @apply text-5xl font-bold;
+  }
+  h3 {
+    @apply text-4xl font-bold;
+  }
+  h4 {
+    @apply text-3xl font-bold;
+  }
+  h5 {
+    @apply text-2xl font-bold;
+  }
+  h6 {
+    @apply text-xl font-bold;
+  }
+
+}
+
+@layer components {
+  .nav-menu-item {
+    @apply relative flex h-full items-center p-4 cursor-pointer font-semibold text-pink-100 hover:text-zinc-200 hover:bg-white/10 transition-colors ease-in-out;
+  }
+}
+
+@custom-variant group-open {
+   &:is(:where(.group):is(.open, [open], :popover-open, :open) *) {
+    @slot; 
+   }
+}
+
+@custom-variant peer-open {
+  &:is(:where(.peer):is(.open, [open], :popover-open, :open) ~ *) {
+    @slot; 
+   }
+}
