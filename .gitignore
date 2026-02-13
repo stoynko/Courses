@@ -32,6 +32,7 @@ bin/
 ### Project Specific ###
 /Udemy/TailwindCSS/dist/
 /Udemy/TailwindCSS/node_modules/
+
 /Hyperskill/Kotlin_Core/Kotlin_Core.iml
 /Hyperskill/Introduction_To_Javascript/node_modules/
 /Hyperskill/Introduction_To_Javascript/Introduction_To_JavaScript.iml
@@ -39,3 +40,7 @@ bin/
 /Hyperskill/Java_Developer/src/Projects/placeholder
 /Hyperskill/Java_Developer/Java_Developer.iml
 
+/SoftUni/Java/03_Advanced/02_Fundamentals.iml
+/SoftUni/Java/03_Advanced/03_Advanced.iml
+/04_OOP.iml
+/SoftUni/Java/04_OOP/.mvn/

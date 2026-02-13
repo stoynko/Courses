@@ -1,0 +1,5 @@
+package _06_ReflectionsAndAnnotations.E04_BarracksWards_TheCommandsStrikeBack.interfaces;
+
+public interface Runnable {
+	void run();
+}

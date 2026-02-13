@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/SoftUni/Java/01_Programming_Basics/01_Programming_Basics.iml" filepath="$PROJECT_DIR$/SoftUni/Java/01_Programming_Basics/01_Programming_Basics.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SoftUni/Java/02_Fundamentals/02_Fundamentals.iml" filepath="$PROJECT_DIR$/SoftUni/Java/02_Fundamentals/02_Fundamentals.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SoftUni/Java/03_Advanced/03_Advanced.iml" filepath="$PROJECT_DIR$/SoftUni/Java/03_Advanced/03_Advanced.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04_OOP.iml" filepath="$PROJECT_DIR$/04_OOP.iml" />
       <module fileurl="file://$PROJECT_DIR$/Courses.iml" filepath="$PROJECT_DIR$/Courses.iml" />
       <module fileurl="file://$PROJECT_DIR$/Hyperskill/Introduction_To_Java/Introduction_To_Java.iml" filepath="$PROJECT_DIR$/Hyperskill/Introduction_To_Java/Introduction_To_Java.iml" />
       <module fileurl="file://$PROJECT_DIR$/Hyperskill/Java_Developer/Java_Developer.iml" filepath="$PROJECT_DIR$/Hyperskill/Java_Developer/Java_Developer.iml" />
