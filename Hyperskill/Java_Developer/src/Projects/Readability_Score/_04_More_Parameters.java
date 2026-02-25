@@ -140,7 +140,9 @@ public class _04_More_Parameters {
 
     private static int getElementsCount(Matcher matcher) {
         int count = 0;
-        while (matcher.find()) count++;
+        while (matcher.find()) {
+            count++;
+        }
         return count;
     }
 
